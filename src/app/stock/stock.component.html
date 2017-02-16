@@ -1,0 +1,8 @@
+<div >
+    <h3>Your current stocks:</h3>
+
+    <md-list>
+    <md-list-item class="primary-color" *ngFor="let stock of stocks | async">{{stock.name}} - {{stock.price}}</md-list-item>
+    </md-list>  
+</div>
+
