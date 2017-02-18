@@ -39,13 +39,6 @@ export class StockService {
     this.dataStore.stocks.forEach((stock, i) => {
       if (stockUpdated.name === stock.name) { 
         this.dataStore.stocks[i] = stockUpdated;
-
-        this.currentStockStream.map(stock => {
-            return stockUpdated.name === stock.name ? stockUpdated : null;
-        }).subscribe(newCurrentStock => {
-          if(newCurrentStock != null) 
-            this.setCurrentStock(newCurrentStock); 
-        });
       }
     });
 
