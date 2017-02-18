@@ -1,0 +1,13 @@
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+.primary-text {font-family: Roboto Regular; }
+
+.secondary-text {font-family: Roboto Regular; }
+
+.selected { border-color: #303F9F; border-style: double; }
+
+.list-item {cursor: pointer; width: 450px; }
+
+@media(max-width:768px) { 
+    .list-item { width: 350px; }
+}

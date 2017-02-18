@@ -1,0 +1,9 @@
+<div *ngIf="state">
+  <p *ngIf="running">
+    Bot is running...
+  </p>
+  <p>
+    Bot is going to run in {{time}} seconds...
+  </p>  
+</div>
+<button (click)="toggleBot($event)">{{btnText}}</button>

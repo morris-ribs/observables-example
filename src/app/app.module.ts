@@ -3,24 +3,32 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import { ChartsModule } from 'ng2-charts';
+import { AppComponent } from './components/app.component';
+import { StockComponent } from './stock/components/stock/stock.component';
 
-import { AppComponent } from './app.component';
-import { StockComponent } from './stock/stock.component';
-
-import {StockService} from './stock.service';
+import {StockService} from './stock/service/stock.service';
 
 import 'hammerjs';
+
+import { StockDetailComponent } from './stock/components/stock-detail/stock-detail.component';
+import { StockListComponent } from './stock/components/stock-list/stock-list.component';
+import { UpdateStockBotComponent } from './update-stock-bot/component/update-stock-bot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StockComponent
+    StockComponent,
+    StockDetailComponent,
+    StockListComponent,
+    UpdateStockBotComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    ChartsModule
   ],
   providers: [StockService],
   bootstrap: [AppComponent]

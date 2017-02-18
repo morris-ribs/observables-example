@@ -1,0 +1,104 @@
+[
+    { 
+        "name": "IBM", "company_name": "International Business Machines Corporation", "cur_price": 180.67,
+        "history_prices": [
+            {
+                "date": "2017-02-17",
+                "price": 180.67
+            },
+            {
+                "date": "2017-02-16",
+                "price": 181.43
+            },
+            {
+                "date": "2017-02-15",
+                "price": 178.68
+            }
+        ]
+    },
+    {
+        "name": "AAPL",  "company_name": "Apple Inc.", "cur_price": 135.72,
+        "history_prices": [
+            {
+                "date": "2017-02-17",
+                "price": 135.72
+            },
+            {
+                "date": "2017-02-16",
+                "price": 135.45
+            },
+            {
+                "date": "2017-02-15",
+                "price": 132.12
+            }
+        ]
+    },
+    {
+        "name": "GOOG", "company_name": "Google Alphabet Inc.", "cur_price": 828.07,
+        "history_prices": [
+            {
+                "date": "2017-02-17",
+                "price": 828.07
+            },
+            {
+                "date": "2017-02-16",
+                "price": 824.16
+            },
+            {
+                "date": "2017-02-15",
+                "price": 813.67
+            }
+        ]
+    },
+    {
+        "name": "FB", "company_name": "Facebook Inc.", "cur_price": 133.53,
+        "history_prices": [
+            {
+                "date": "2017-02-17",
+                "price": 133.53
+            },
+            {
+                "date": "2017-02-16",
+                "price": 133.84
+            },
+            {
+                "date": "2017-02-15",
+                "price": 134.19
+            }
+        ]
+    },
+    {
+        "name": "AMZN", "company_name": "Amazon.com, Inc.", "cur_price": 845.07,
+        "history_prices": [
+             {
+                "date": "2017-02-17",
+                "price": 845.07
+            },
+            {
+                "date": "2017-02-16",
+                "price": 844.14
+            },
+            {
+                "date": "2017-02-15",
+                "price": 827.46
+            }
+        ]
+    },
+    {
+        "name": "YHOO", "company_name": "Yahoo! Inc.", "cur_price": 45.10,
+        "history_prices": [
+             {
+                "date": "2017-02-17",
+                "price": 45.10
+            },
+            {
+                "date": "2017-02-16",
+                "price": 45.16
+            },
+            {
+                "date": "2017-02-15",
+                "price": 45.93
+            }
+        ]
+    }
+]

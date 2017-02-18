@@ -1,0 +1,12 @@
+<div >
+    <h3>Your current stocks:</h3>
+
+    <md-list class="disp">
+      
+        <md-list-item class="divider-color list-content" *ngFor="let stock of stocks | async">
+           <stock [stock]="stock"></stock>
+        </md-list-item>
+    </md-list>  
+    
+</div>
+

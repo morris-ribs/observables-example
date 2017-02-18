@@ -1,0 +1,14 @@
+<div *ngIf="stock.history_prices" class="content">
+  <h3>
+    {{stock.name}} ({{stock.company_name}}) - {{stock.cur_price}}  
+  </h3>
+  <div style="display: block;">
+    <canvas baseChart 
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [colors]="lineChartColors"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType"></canvas>
+  </div>
+</div>

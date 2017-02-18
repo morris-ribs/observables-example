@@ -5,18 +5,22 @@ body {
  font-family: Roboto;
  }
 
- .primary-color {
-    color: #3F51B5!important;
-  }
-.accent-color {
-    color: #FF4081!important;
-  }
-.background-primary-color {
-    background-color: #3F51B5!important;
-  }
-.background-accent-color {
-    background-color: #FF4081!important;
-  }
-.white-text {
-    color: #FFF!important;
+.dark-primary-color    { background: #303F9F; }
+.default-primary-color { background: #3F51B5; }
+.light-primary-color   { background: #C5CAE9; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #448AFF; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
+
+.disp{
+     display: flex;
+  flex-direction: column;
+}
+
+.content { height:800px; width:800px; }
+
+@media(max-width:768px){
+  .content { height:600px; width:300px; }
 }
