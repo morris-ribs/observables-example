@@ -9,9 +9,7 @@ export class UpdateStockBot {
         const randomIndex = Math.floor(Math.random()*6 + 1) % 6;
 
         stockService.getStocks().subscribe(stocks => {
-            let stock = stocks[randomIndex];
-            const hist:StockHistory =  { date: new Date(), price: stock.cur_price };
-            stock.history_prices.push(hist);   
+            let stock = stocks[randomIndex];  
             stock.cur_price = parseFloat((stock.cur_price + num).toFixed(2));
         });
     }

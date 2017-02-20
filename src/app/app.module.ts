@@ -14,6 +14,7 @@ import 'hammerjs';
 import { StockDetailComponent } from './stock/components/stock-detail/stock-detail.component';
 import { StockListComponent } from './stock/components/stock-list/stock-list.component';
 import { UpdateStockBotComponent } from './update-stock-bot/component/update-stock-bot.component';
+import { StockHistoryUpdateComponent } from './stock/components/stock-history-update/stock-history-update.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UpdateStockBotComponent } from './update-stock-bot/component/update-sto
     StockComponent,
     StockDetailComponent,
     StockListComponent,
-    UpdateStockBotComponent
+    UpdateStockBotComponent,
+    StockHistoryUpdateComponent
   ],
   imports: [
     BrowserModule,

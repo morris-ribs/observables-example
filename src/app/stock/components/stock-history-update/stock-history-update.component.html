@@ -1,0 +1,10 @@
+<h3>Insert a new closure info</h3>
+<md-select placeholder="Current Stocks" [(ngModel)]="stockName">
+  <md-option *ngFor="let stock of stockList" [value]="stock.name">
+    {{ stock.name }}
+  </md-option>
+</md-select>
+<md-input-container>
+  <input md-input placeholder="Price" type="number" [(ngModel)]="price" />
+</md-input-container>
+<button md-button (click)="insertHistory($event)">OK</button>

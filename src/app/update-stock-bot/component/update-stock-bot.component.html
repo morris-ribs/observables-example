@@ -1,3 +1,4 @@
+<h3>Here is a bot for updating randomly the stocks...</h3>
 <div *ngIf="state">
   <p *ngIf="running">
     Bot is running...
@@ -6,4 +7,4 @@
     Bot is going to run in {{time}} seconds...
   </p>  
 </div>
-<button (click)="toggleBot($event)">{{btnText}}</button>
+<button md-raised-button (click)="toggleBot($event)">{{btnText}}</button>

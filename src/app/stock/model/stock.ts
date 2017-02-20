@@ -1,5 +1,5 @@
 export class StockHistory {
-    date: Date;
+    date: string;
     price: number;
 }
 

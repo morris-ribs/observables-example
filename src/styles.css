@@ -20,7 +20,3 @@ body {
 }
 
 .content { height:800px; width:800px; }
-
-@media(max-width:768px){
-  .content { height:600px; width:300px; }
-}
