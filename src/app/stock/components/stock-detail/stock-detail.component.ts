@@ -30,19 +30,19 @@ export class StockDetailComponent implements OnInit {
   public lineChartType:string = 'line';
 
   constructor(private stockService: StockService) { 
-    
+    console.log("constructor");
   }
 
   ngOnInit() {
     this.stockService.getCurrentStock().subscribe((curStock: Stock) => this.stock = curStock);
-
   }
 
   ngDoCheck(){        
+    if(this.stock){
     this.lineChartData = [{data: this.stock && this.stock.history_prices ? 
       this.stock.history_prices.sort((hist1,hist2) => (hist1.date < hist2.date) ?  0 :  1 ).map(hist => hist.price): [], label: this.stock.name}];
 
     this.lineChartLabels = this.stock && this.stock.history_prices ? 
       this.stock.history_prices.map(hist => hist.date).sort((date1,date2) => (date1 < date2) ?  0 :  1 ): [];
-  }
+  }}
 }

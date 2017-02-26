@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UpdateStockBot } from '../update-stock-bot';
 import { StockService } from '../../stock/service/stock.service';
+import { Subscription } from 'rxjs/Rx';
 
 @Component({
   selector: 'update-stock-bot',
@@ -10,8 +11,10 @@ import { StockService } from '../../stock/service/stock.service';
 export class UpdateStockBotComponent implements OnInit {
   state: boolean = false;
   running: boolean = false;
+  subscribed: boolean = false;
   btnText: string = "Start the bot!";
   time: number = 5;
+  subscription: Subscription;
   constructor(private stockService: StockService) { }
 
   ngOnInit() {

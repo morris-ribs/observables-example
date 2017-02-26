@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import {Observable, BehaviorSubject} from 'rxjs/Rx';
+import { Http, Headers, RequestOptions } from '@angular/http';
+import {Observable, BehaviorSubject, Subject} from 'rxjs/Rx';
 import {Stock} from '../model/stock';
 
 @Injectable()
 export class StockService {
 
   // a stream for new assets
-  private stocksStream : BehaviorSubject <Stock[]> = new BehaviorSubject <Stock[]>([]);
-  private currentStockStream : BehaviorSubject <Stock> = new BehaviorSubject<Stock>(new Stock());
+  private stocksStream : BehaviorSubject <Stock[]> ;
+  private currentStockStream : Subject <Stock>;
 
   private dataStore: {  // This is where we will store our data in memory
     stocks: Stock[]
@@ -17,12 +17,12 @@ export class StockService {
   constructor(private http: Http) { 
     this.dataStore = {stocks: []};
     this.stocksStream = new BehaviorSubject <Stock[]>([]);
-    this.currentStockStream = new BehaviorSubject<Stock>(new Stock());
+    this.currentStockStream = new Subject<Stock>();
   }
 
   // initial load
   loadStocks() : void {
-     this.http.get('app/stock/service/data/stocks.json').map(
+     this.http.get('http://localhost:9000/').map(
        res => res.json())
        .subscribe(stocks => {
          this.dataStore.stocks = stocks;
@@ -31,18 +31,26 @@ export class StockService {
   }
 
   getStocks(): Observable<Stock[]> {
-     return this.stocksStream.asObservable().share();
+     return this.stocksStream.asObservable();
+  }
+
+  setStockPrice(index:number, priceToAdd: number) {
+    if (this.dataStore.stocks[index]) {
+      const p = this.dataStore.stocks[index].cur_price + priceToAdd;
+      this.dataStore.stocks[index].cur_price = parseFloat(p.toFixed(2));
+      this.updateStock(this.dataStore.stocks[index]);
+    }
   }
 
   // update a stock
   updateStock(stockUpdated: Stock){
-    this.dataStore.stocks.forEach((stock, i) => {
-      if (stockUpdated.name === stock.name) { 
-        this.dataStore.stocks[i] = stockUpdated;
-      }
-    });
+    
+    const body = JSON.stringify(stockUpdated);
+    let headers      = new Headers({ 'Content-Type': 'text/plain' }); // ... Set content type as text in order not to trigger preflight OPTIONS request
+    let options       = new RequestOptions({ headers: headers }); // Create a request option
 
-    this.stocksStream.next(Object.assign({}, this.dataStore).stocks);
+    this.http.post('http://localhost:9000/stock', body, options)
+    .catch((error:any) => Observable.throw(error || 'Server error'));
   }
 
 

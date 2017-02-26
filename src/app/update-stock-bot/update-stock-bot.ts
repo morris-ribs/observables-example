@@ -5,12 +5,9 @@ export class UpdateStockBot {
     static updateStocks(stockService: StockService) {
         const x = -0.5;
         const y = 0.5;
-        const num = Math.random() * (y - x) + x;
-        const randomIndex = Math.floor(Math.random()*6 + 1) % 6;
+        const num = parseFloat((Math.random() * (y - x) + x).toFixed(2));
+        const randomIndex = Math.floor(Math.random()*8 + 1) % 8;
 
-        stockService.getStocks().subscribe(stocks => {
-            let stock = stocks[randomIndex];  
-            stock.cur_price = parseFloat((stock.cur_price + num).toFixed(2));
-        });
+        stockService.setStockPrice(0, num);        
     }
 }

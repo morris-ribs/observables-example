@@ -18,7 +18,8 @@ export class StockListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.stocks = this.stockService.getStocks();
     this.stockService.loadStocks();
+
+    this.stocks = this.stockService.getStocks().map(st => st.slice(0, 5));
   }
 }

@@ -1,4 +1,4 @@
-<div *ngIf="stock.history_prices" class="content">
+<div *ngIf="stock && stock.history_prices" class="content">
   <h3>
     {{stock.name}} ({{stock.company_name}}) - {{stock.cur_price}}  
   </h3>

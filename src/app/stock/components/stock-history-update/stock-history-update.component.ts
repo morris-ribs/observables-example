@@ -39,6 +39,7 @@ export class StockHistoryUpdateComponent implements OnInit {
     if (this.stockName !== "") {
       let stock = this.stockList.find(s => s.name === this.stockName);
       stock.history_prices.push({ date: this.today, price: this.price });
+      console.log("inserting data");
       this.stockService.updateStock(stock);
     }
 

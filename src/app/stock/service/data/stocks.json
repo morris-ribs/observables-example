@@ -1,6 +1,8 @@
 [
     { 
-        "name": "IBM", "company_name": "International Business Machines Corporation", "cur_price": 180.67,
+        "name": "IBM", 
+        "company_name": "International Business Machines Corporation", 
+        "cur_price": 180.67,
         "history_prices": [
             {
                 "date": "2017-02-17",
@@ -17,7 +19,9 @@
         ]
     },
     {
-        "name": "AAPL",  "company_name": "Apple Inc.", "cur_price": 135.72,
+        "name": "AAPL",  
+        "company_name": "Apple Inc.", 
+        "cur_price": 135.72,
         "history_prices": [
             {
                 "date": "2017-02-17",
@@ -34,7 +38,9 @@
         ]
     },
     {
-        "name": "GOOG", "company_name": "Google Alphabet Inc.", "cur_price": 828.07,
+        "name": "GOOG", 
+        "company_name": "Google Alphabet Inc.", 
+        "cur_price": 828.07,
         "history_prices": [
             {
                 "date": "2017-02-17",
@@ -51,7 +57,9 @@
         ]
     },
     {
-        "name": "FB", "company_name": "Facebook Inc.", "cur_price": 133.53,
+        "name": "FB", 
+        "company_name": "Facebook Inc.", 
+        "cur_price": 133.53,
         "history_prices": [
             {
                 "date": "2017-02-17",
@@ -68,7 +76,9 @@
         ]
     },
     {
-        "name": "AMZN", "company_name": "Amazon.com, Inc.", "cur_price": 845.07,
+        "name": "AMZN", 
+        "company_name": "Amazon.com, Inc.", 
+        "cur_price": 845.07,
         "history_prices": [
              {
                 "date": "2017-02-17",
@@ -85,7 +95,9 @@
         ]
     },
     {
-        "name": "YHOO", "company_name": "Yahoo! Inc.", "cur_price": 45.10,
+        "name": "YHOO", 
+        "company_name": "Yahoo! Inc.", 
+        "cur_price": 45.10,
         "history_prices": [
              {
                 "date": "2017-02-17",
@@ -98,6 +110,36 @@
             {
                 "date": "2017-02-15",
                 "price": 45.93
+            }
+        ]
+    },
+    {
+        "name": "NOK", 
+        "company_name": "Nokia Corporation", 
+        "cur_price": 5.14,
+        "history_prices": [
+             {
+                "date": "2017-02-17",
+                "price": 5.14
+            },
+            {
+                "date": "2017-02-16",
+                "price": 5.15
+            }
+        ]
+    },
+    {
+        "name": "SNE", 
+        "company_name": "Sony Corporation", 
+        "cur_price": 30.23,
+        "history_prices": [
+             {
+                "date": "2017-02-17",
+                "price": 30.23
+            },
+            {
+                "date": "2017-02-16",
+                "price": 31.24
             }
         ]
     }

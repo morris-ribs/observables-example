@@ -6,7 +6,12 @@ import {Stock} from '../../model/stock';
 @Component({
   inputs:['stock'],
   selector: 'stock',
-  templateUrl: './stock.component.html',
+  template: `
+  <div [ngClass]="selectedClass" class="list-item" (click)="selectStock($event)">
+    <h4 md-line class="primary-text">{{stock.name}}</h4>
+    <p md-line class="secondary-text"> {{stock.cur_price}}</p>
+</div>
+  `,
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit {
