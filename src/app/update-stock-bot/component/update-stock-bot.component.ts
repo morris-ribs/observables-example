@@ -11,10 +11,8 @@ import { Subscription } from 'rxjs/Rx';
 export class UpdateStockBotComponent implements OnInit {
   state: boolean = false;
   running: boolean = false;
-  subscribed: boolean = false;
   btnText: string = "Start the bot!";
   time: number = 5;
-  subscription: Subscription;
   constructor(private stockService: StockService) { }
 
   ngOnInit() {

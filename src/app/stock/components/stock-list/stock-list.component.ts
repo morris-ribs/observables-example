@@ -11,15 +11,10 @@ import { Stock } from '../../model/stock';
 })
 export class StockListComponent implements OnInit {
   stocks: Observable<Stock[]>;
-  btnText: string = "Start Bot";
-  state: boolean = false;
-  constructor(private stockService: StockService) { 
-
-  }
+  constructor(private stockService: StockService){}
 
   ngOnInit() {
     this.stockService.loadStocks();
-
     this.stocks = this.stockService.getStocks().map(st => st.slice(0, 5));
   }
 }
